@@ -16,4 +16,3 @@ const players = [
     { name: "Landon", team: "Red", score: 14 },
 ]
 
-export default players

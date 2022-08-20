@@ -19,11 +19,7 @@ const Header = () => {
                             <i className='fa fa-home fa-lg' />Home
                         </NavLink>
                     </NavItem>
-                    <NavItem>
-                        <NavLink className='nav-link' to='/challenge1'>
-                            <i className='fa fa-list fa-lg' />Challenge1
-                        </NavLink>
-                    </NavItem>
+
 
                 </Nav>
 
