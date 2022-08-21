@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 import players from '../data/players'
 
 const Challenge1 = () => {
-    const [playersData, setPlayersData] =  useState(players)
+    const [playersData, setPlayersData] =  useState([...players])
     const [playerList, setPlayerList] = useState('') 
     const namesToString = () => {
         setPlayerList(
