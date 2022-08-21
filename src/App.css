@@ -76,3 +76,7 @@ h2 {
     opacity: 0;
     transition: 300ms ease-in;
 }
+
+.challenge1{
+    margin-left: 100px;
+}
