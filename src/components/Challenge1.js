@@ -25,7 +25,7 @@ const Challenge1 = () => {
     }   
     useEffect(()=>{
         namesToString();
-    })
+    },[])
 
     const sortAscending = () => {
         setPlayersData(playersData.sort((a,b)=> {

@@ -77,6 +77,6 @@ h2 {
     transition: 300ms ease-in;
 }
 
-.challenge1{
+.challenge1, .challenge2{
     margin-left: 100px;
 }
