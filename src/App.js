@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import Header from './components/Header';
 import Challenge1 from './components/Challenge1'
 import Challenge2 from './components/Challenge2';
+import Challenge3 from './components/Challenge3';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
 
         <Route path='/challenge1' element={<Challenge1 />} />
         <Route path='/Challenge2' element={<Challenge2 />} />
+        <Route path='/Challenge3' element={<Challenge3 />} />
 
       </Routes>
 
