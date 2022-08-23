@@ -8,3 +8,4 @@
 // the archives.js)
 // -remember to add the make sure the links are all active and working
 // -add a link to the archive page to the header
+// format page with indentation (using App.css)

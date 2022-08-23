@@ -21,16 +21,24 @@ const Header = () => {
                     </NavItem>
                     <NavItem>
                         
-                        <NavLink className='nav-link' to='/challenge'>
-                            Active
+                        <NavLink className='nav-link' to='/challenge1'>
+                            Challenge 1
                         </NavLink>
                     </NavItem>
                     <NavItem>
                         
-                        <NavLink className='nav-link' to='/archives'>
-                            Archives
+                        <NavLink className='nav-link' to='/challenge2'>
+                            Challenge 2
                         </NavLink>
                     </NavItem>
+                    <NavItem>
+                        
+                        <NavLink className='nav-link' to='/challenge3'>
+                            Challenge 3
+                        </NavLink>
+                    </NavItem>
+
+
                 </Nav>
 
             </Collapse>
