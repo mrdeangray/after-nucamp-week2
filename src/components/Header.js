@@ -19,18 +19,15 @@ const Header = () => {
                             <i className='fa fa-home fa-lg' />Home
                         </NavLink>
                     </NavItem>
+
+
                     <NavItem>
-                        
-                        <NavLink className='nav-link' to='/challenge'>
-                            Active
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        
-                        <NavLink className='nav-link' to='/archives'>
+                        <NavLink className='nav-link' to='/challenge4'>
                             Archives
                         </NavLink>
                     </NavItem>
+
+
                 </Nav>
 
             </Collapse>

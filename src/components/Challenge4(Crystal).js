@@ -3,7 +3,7 @@ import previousChallengeList from '../data/archives'
 
 const Archives = () => {
   return (
-    <div className='archives'>
+    <div className='challenge4'>
       <h4>Previous Challenges</h4>
       <ul>
         {previousChallengeList.map((challenge)=>(
