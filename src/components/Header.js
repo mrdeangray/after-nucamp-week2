@@ -26,7 +26,11 @@ const Header = () => {
                             Archives
                         </NavLink>
                     </NavItem>
-
+                    <NavItem>
+                        <NavLink className='nav-link' to='/challenge5'>
+                            <i className='fa fa-search fa-lg' /> Search
+                        </NavLink>
+                    </NavItem>
 
                 </Nav>
 
