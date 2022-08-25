@@ -26,7 +26,7 @@ const Archive = () => {
       <ul>
         {
           previousChallengeList.map((challenge, idx) => (
-            <li>
+            <li key={idx}>
               <Link to={challenge.location}>{challenge.title}:</Link>
               {` `}{challenge.description}
 
