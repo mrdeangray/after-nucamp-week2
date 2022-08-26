@@ -28,12 +28,12 @@
 
 // You do not need to edit this code
 const Challenge6 = () => {
-    return (
-      <div className='challenge6'>
-          <h3>Challenge 6</h3>
-         <p>You are on the Active.js page. This is challenge 6</p>
-      </div>
-    )
-  }
-  
-  export default Challenge6
+  return (
+    <div className='challenge6'>
+      <h3>Challenge 6</h3>
+      <p>You are on the Active.js page. This is challenge 6</p>
+    </div>
+  )
+}
+
+export default Challenge6

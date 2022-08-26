@@ -22,13 +22,19 @@ const Header = () => {
 
 
                     <NavItem>
-                        <NavLink className='nav-link' to='/challenge4'>
+                        <NavLink className='nav-link' to='/active'>
+                            Active Challenge
+                        </NavLink>
+                    </NavItem>
+
+                    <NavItem>
+                        <NavLink className='nav-link' to='/archives'>
                             Archives
                         </NavLink>
                     </NavItem>
 
                     <NavItem>
-                        <NavLink className='nav-link' to='/challenge5'>
+                        <NavLink className='nav-link' to='/archivesearch'>
                             <i className='fa fa-search fa-lg' />Search
                         </NavLink>
                     </NavItem>
