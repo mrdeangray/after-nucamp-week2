@@ -1,5 +1,5 @@
 import React from 'react'
-import Challenge5 from '../components/Challenge5'
+import Challenge5 from '../components/Challenge5-Crystal'
 
 const ArchiveSearch = () => {
     return (

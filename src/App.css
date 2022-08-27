@@ -81,7 +81,8 @@ h2 {
 .challenge3,
 .challenge4,
 .challenge5,
-.challenge6 {
+.challenge6,
+.challenge7 {
     margin-left: 100px;
 }
 
@@ -92,8 +93,17 @@ h2 {
     justify-content: space-evenly;
 }
 
-.keywords:hover {
+.challenge7-buttons:hover {
     color: blue;
     font-size: 105%;
     cursor: pointer;
+    background-color: orange;
 }
+
+/* .btnSelected {
+    background-color: red;
+}
+
+.btnUnselected {
+    background-color: blue;
+} */
