@@ -10,7 +10,7 @@
 //Add a route/link for this component to the Header component.
 
 
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import players from '../data/players'
 
 
@@ -19,22 +19,13 @@ const Challenge7 = () => {
     const [list, setList] = useState([...players])
     const [playerInitials, setPlayerInitials] = useState([])
     const [display, setDisplay] = useState(<div></div>)
+    const removeNamesByInitial = useCallback((char) => {
+        setList(list.filter(player => player.name[0] !== char))
 
-    useEffect(() => {
-        setDisplay(
-            <ul>
-                {
-                    list.sort().map((player, idx) => (
-                        <li key={idx}>{player.name}</li>
-                    ))
-                }
-            </ul>
-        )
-        getPlayerInitials()
     }, [list])
 
-
-    const getPlayerInitials = () => {
+ 
+    const getPlayerInitials = useCallback(() => {
         const initials = list.reduce((acc, curr) => {
             if (acc.indexOf(curr.name[0]) === -1) {
                 acc.push(curr.name[0])
@@ -51,12 +42,23 @@ const Challenge7 = () => {
                 }
             </ul>
         )
-    }
+    },[list, removeNamesByInitial])
 
-    const removeNamesByInitial = (char) => {
-        setList(list.filter(player => player.name[0] !== char))
 
-    }
+
+    useEffect(() => {
+        setDisplay(
+            <ul>
+                {
+                    list.sort().map((player, idx) => (
+                        <li key={idx}>{player.name}</li>
+                    ))
+                }
+            </ul>
+        )
+        getPlayerInitials()
+    }, [getPlayerInitials, list])
+
 
     const handleStartOver = () => {
         setList([...players]
