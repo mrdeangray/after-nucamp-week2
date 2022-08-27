@@ -81,29 +81,7 @@ h2 {
 .challenge3,
 .challenge4,
 .challenge5,
-.challenge6,
-.challenge7 {
+.challenge6
+{
     margin-left: 100px;
 }
-
-.keywordList {
-    color: #1731c5;
-    width: 600px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.challenge7-buttons:hover {
-    color: blue;
-    font-size: 105%;
-    cursor: pointer;
-    background-color: orange;
-}
-
-/* .btnSelected {
-    background-color: red;
-}
-
-.btnUnselected {
-    background-color: blue;
-} */
