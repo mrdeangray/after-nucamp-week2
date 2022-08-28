@@ -9,3 +9,51 @@
 //add a CSS rule to the App.css file so the component's body is indented.
 //Add a route/link for this component to the Header component.
 
+import { useEffect, useState } from "react"
+import players from "../data/players"
+
+const Challenge7 = () => {
+    const [buttonsArray, setButtonsArray]=useState([])
+    const [buttons, setButtons]=useState(<div></div>)
+    const [playersNames, setPlayersNames]=useState(players.map(player=>player.name))
+    const filterNames=(btn)=>{
+        const filteredNames=playersNames.filter(name=>name[0]!==btn)
+        setPlayersNames(filteredNames)
+    }
+    const loadButtons = ()=>{
+        setButtonsArray(playersNames.reduce((acc, curr)=>{
+            // console.log(curr[0])
+            if(!acc.includes(curr[0])){
+                acc.push(curr[0])
+            }
+            return acc;
+        },[]))
+        setButtons(<div>
+            {buttonsArray.map((btn)=>(
+                <button key={btn} onClick={()=>filterNames(btn)}>{btn}</button>
+            ))}
+        </div>)    
+    }
+
+    const resetPlayersNames=()=>{
+        setPlayersNames(players.map(player=>player.name))
+        loadButtons();
+    }
+
+    useEffect(()=>{
+        loadButtons();
+    },[playersNames])
+    return (
+        <div className="challenge7">
+            {buttons}
+            <ul>
+                {playersNames.map((player, index)=>(
+                    <li key={index}>{player}</li>
+                ))}
+            </ul>
+            <button onClick={resetPlayersNames}>StartOver</button>
+        </div>
+    )
+}
+
+export default Challenge7

@@ -81,7 +81,15 @@ h2 {
 .challenge3,
 .challenge4,
 .challenge5,
-.challenge6
+.challenge6,
+.challenge7
 {
     margin-left: 100px;
+}
+
+.challenge7 button{
+    margin: 3px;
+}
+.challenge7 button:hover{
+    background-color: orange;
 }
