@@ -21,7 +21,7 @@ const Challenge7 = () => {
         const filteredNames = playersNames.filter(name => name[0] !== btn)
         setPlayersNames(filteredNames)
     },[playersNames])
-    
+
     const loadButtons = useCallback(() => {
         setButtonsArray(playersNames.reduce((acc, curr) => {
             // console.log(curr[0])
