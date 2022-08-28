@@ -82,7 +82,8 @@ h2 {
 .challenge4,
 .challenge5,
 .challenge6,
-.challenge7 {
+.challenge7,
+.challenge8 {
     margin-left: 100px;
 }
 
@@ -98,6 +99,11 @@ h2 {
     font-size: 105%;
     cursor: pointer;
     background-color: orange;
+}
+
+.player-image {
+    height: 100px;
+    /* width: 200px; */
 }
 
 /* .btnSelected {
