@@ -46,8 +46,8 @@ const Challenge8 = () => {
         <div className="active-players">
             <h5>Active Players: {activePlayers.length}</h5> 
             <ul>
-                {activePlayers.map((player, index)=>(
-                    <li className='player-box' key={index} onClick={()=>movePlayer(player)}>
+                {activePlayers.map((player)=>(
+                    <li className='player-box' key={player.id} onClick={()=>movePlayer(player)}>
                         {player.name}
                         <img  
                             className='player-img' 
@@ -61,8 +61,8 @@ const Challenge8 = () => {
         <div className="inactive-players">
             <h5>Inactive Players: {inactivePlayers.length}</h5>
         <ul>
-                {inactivePlayers.map((player, index)=>(
-                    <li className='player-box' key={index} >
+                {inactivePlayers.map((player)=>(
+                    <li className='player-box' key={player.id} >
                         {player.name}
                         <img  
                             className='player-img' 
