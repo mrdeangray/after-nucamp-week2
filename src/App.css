@@ -82,8 +82,7 @@ h2 {
 .challenge4,
 .challenge5,
 .challenge6,
-.challenge7,
-.challenge8 {
+.challenge7 {
     margin-left: 100px;
 }
 
@@ -120,4 +119,42 @@ h2 {
 
 .challenge7 button:hover {
     background-color: orange;
+}
+
+.challenge8 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.active-players{
+
+    background-color: purple;
+    color: white;
+    width: 40%;
+    
+}
+
+.inactive-players{
+    background-color: yellowgreen;
+    color: white;
+    width: 40%;
+}
+
+.player-img{
+    width: 20%;
+    
+}
+
+.player-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.player-box:hover{
+    scale: 1.2;
+    border: 2px solid red;
+    z-index: 2;
 }
