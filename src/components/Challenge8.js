@@ -38,7 +38,7 @@ const Challenge8 = () => {
     
     useEffect(() => {
         fetchPlayers();
-    }, [])
+    }, [fetchPlayers])
     
   return (
     <div className="challenge8">
