@@ -30,18 +30,19 @@ const Challenge8 = () => {
       [],
     )
     
-      const movePlayer = useCallback(
-        (playerToRemove)=> {
-            setActivePlayers(activePlayers.filter(player=>player.name!==playerToRemove.name))
-            setInactivePlayers([...inactivePlayers, playerToRemove])
-        }
-      )
+    const movePlayer =
+    (playerToRemove)=> {
+        setActivePlayers(activePlayers.filter(player=>player.name!==playerToRemove.name))
+        setInactivePlayers([...inactivePlayers, playerToRemove])
+    }
+    
     useEffect(() => {
         fetchPlayers();
     }, [])
     
   return (
     <div className="challenge8">
+        
         <div className="active-players">
             <h5>Active Players: {activePlayers.length}</h5> 
             <ul>
