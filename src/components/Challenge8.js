@@ -57,7 +57,8 @@ const Challenge8 = () => {
                 ))}
             </ul>
         </div>
-        <div className="inactive-players">Inactive Players: {inactivePlayers.length}
+        <div className="inactive-players">
+            <h5>Inactive Players: {inactivePlayers.length}</h5>
         <ul>
                 {inactivePlayers.map((player, index)=>(
                     <li className='player-box' key={index} >
