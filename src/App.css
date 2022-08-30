@@ -122,11 +122,19 @@ h2 {
     background-color: orange;
 }
 
-.challenge8-player:hover {
+.challenge8 .active-player:hover {
 
     font-size: 200%;
     cursor: pointer;
     border: 3px solid red;
+    border-radius: 10px;
+    /* background-color: orange; */
+}
+.challenge8 .inactive-player:hover {
+
+    font-size: 200%;
+    cursor: pointer;
+    border: 3px solid rgb(80, 255, 6);
     border-radius: 10px;
     /* background-color: orange; */
 }
