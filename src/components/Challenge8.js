@@ -30,12 +30,17 @@ const Challenge8 = () => {
       [],
     )
     
-    const movePlayer =
-    (playerToRemove)=> {
-        setActivePlayers(activePlayers.filter(player=>player.name!==playerToRemove.name))
-        setInactivePlayers([...inactivePlayers, playerToRemove])
+    const movePlayerInactive =
+    (playerToMove)=> {
+        setActivePlayers(activePlayers.filter(player=>player.name!==playerToMove.name))
+        setInactivePlayers([...inactivePlayers, playerToMove])
     }
-    
+    const movePlayerActive =
+    (playerToMove)=> {
+        setInactivePlayers(inactivePlayers.filter(player=>player.name!==playerToMove.name))
+        setActivePlayers([...activePlayers, playerToMove])
+    }
+
     useEffect(() => {
         fetchPlayers();
     }, [fetchPlayers])
@@ -46,8 +51,8 @@ const Challenge8 = () => {
         <div className="active-players">
             <h5>Active Players: {activePlayers.length}</h5> 
             <ul>
-                {activePlayers.map((player)=>(
-                    <li className='player-box' key={player.id} onClick={()=>movePlayer(player)}>
+                {activePlayers.map((player, index)=>(
+                    <li className='player-box' key={index} onClick={()=>movePlayerInactive(player)}>
                         {player.name}
                         <img  
                             className='player-img' 
@@ -61,8 +66,8 @@ const Challenge8 = () => {
         <div className="inactive-players">
             <h5>Inactive Players: {inactivePlayers.length}</h5>
         <ul>
-                {inactivePlayers.map((player)=>(
-                    <li className='player-box' key={player.id} >
+                {inactivePlayers.map((player, index)=>(
+                    <li className='player-box' key={index} onClick={()=>movePlayerActive(player)}>
                         {player.name}
                         <img  
                             className='player-img' 
