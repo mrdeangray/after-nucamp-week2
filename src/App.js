@@ -10,6 +10,8 @@ import Archives from './pages/Archives';
 import ArchiveSearch from './pages/ArchiveSearch';
 import Active from './pages/Active';
 import Challenge7 from './components/Challenge7-Crystal';
+import Challenge8 from './components/Challenge8';
+import Challenge9 from './components/Challenge9';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         <Route path='/archivesearch' element={<ArchiveSearch />} />
         <Route path='/active' element={<Active />} />
         <Route path='/Challenge7' element={<Challenge7 />} />
+        <Route path='/Challenge8' element={<Challenge8 />} />
+        <Route path='/Challenge9' element={<Challenge9 />} />
 
       </Routes>
 
