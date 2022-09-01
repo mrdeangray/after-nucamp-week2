@@ -9,7 +9,7 @@ import Challenge3 from './components/Challenge3';
 import Archives from './pages/Archives';
 import ArchiveSearch from './pages/ArchiveSearch';
 import Active from './pages/Active';
-import Challenge7 from './components/Challenge7-Crystal';
+import Challenge7 from './components/Challenge7';
 
 function App() {
   return (

@@ -37,6 +37,12 @@ const previousChallengeList = [
         description: 'Remove player names based on initials',
         keywords: ['useEffect', 'useState', 'Array.map']
     },
+    {
+        title: "Challenge 8",
+        location: '/challenge8',
+        description: 'Display player images in active and inactive columns',
+        keywords: ['useEffect', 'useState', 'Array.map']
+    },
 
 
 ]
