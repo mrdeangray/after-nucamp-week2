@@ -9,13 +9,11 @@ import Challenge3 from './components/Challenge3';
 import Archives from './pages/Archives';
 import ArchiveSearch from './pages/ArchiveSearch';
 import Active from './pages/Active';
-<<<<<<< HEAD
-import Challenge7 from './components/Challenge7';
-=======
+// import Challenge7 from './components/Challenge7';
 import Challenge7 from './components/Challenge7-Crystal';
 import Challenge8 from './components/Challenge8';
 import Challenge9 from './components/Challenge9';
->>>>>>> DeanMainFromChallenge7
+
 
 function App() {
   return (
