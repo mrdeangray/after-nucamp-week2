@@ -1,5 +1,5 @@
 import React from 'react';
-import './App-Crystal.css';
+import './App.css';
 import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage';
 import Header from './components/Header';
@@ -11,7 +11,9 @@ import ArchiveSearch from './pages/ArchiveSearch';
 import Active from './pages/Active';
 // import Challenge7 from './components/Challenge7';
 import Challenge7 from './components/Challenge7-Crystal';
-import Challenge8 from './components/Challenge8';
+// import Challenge8 from './components/Challenge8';
+import Challenge8 from './components/Challenge8-Crystal';
+
 import Challenge9 from './components/Challenge9';
 
 
