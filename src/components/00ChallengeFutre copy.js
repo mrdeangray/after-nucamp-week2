@@ -1,59 +1,78 @@
-//Using of src attribute in this way means, your image will be loaded from the absolute path "///images/resto.png" for your site. Images directory should be located at the root of your site. 
+
+//Challenge8:
+//Create a Challenge8 component in the components directory.
+//The component should retrieve and display the names and images from the players.js file in the data directory.
+//The component should have two columns: Active and Inactive
+//Clicking each image in the Active column will move the player to the Inactive column
+//Clicking each image in the Inactive column will move the player back to the Active column
+//Both active and inactive columns should keep a count of their players.
+//Add CSS rules for the hover state of the players in the active column.
+//add a CSS rule to the App.css file so the component's body is indented.
+//Add a route/link for this component to the Header component.
+
 
 import { useState, useCallback, useEffect } from 'react'
-import players from '../data/players'
-//const initials = [{ initial: 'J', active: false }, { initial: 'M', active: false }, { initial: 'A', active: false }]
-const initials = [{ initial: 'J', active: false }, { initial: 'M', active: false }, { initial: 'A', active: false }]
+import playersData from '../data/players'
 
 const Challenge8 = () => {
-    const [playerInitials, setPlayerInitials] = useState([])
+    const [activePlayers, setActivePlayers] = useState([...playersData])
+    const [inactivePlayers, setInactivePlayers] = useState([])
+    const [displayInactive, setDisplayInactive] = useState(<div>No inactive players</div>)
+
+    const moveToInactive = (id) => {
+        setActivePlayers(activePlayers.filter((player) => player.id !== id))
+        const inactive = activePlayers.filter((player) => player.id === id)
+        setInactivePlayers([...inactivePlayers, ...inactive])
+    }
+
+    const moveToActive = useCallback((id) => {
+        setInactivePlayers(inactivePlayers.filter((player) => player.id !== id))
+        const active = inactivePlayers.filter((player) => player.id === id)
+        setActivePlayers([...active, ...activePlayers])
+    }, [activePlayers, inactivePlayers])
 
     useEffect(() => {
-        getPlayerInitials()
-    }, [])
-
-    const handleClick = (char) => {
-        const remainingObj = initials.filter(obj => obj.initial !== char)
-        // if (!selectedbutton.active) {
-        //     console.log("false")
-        //     console.log(initials)
-        // }
-        // else {
-        //     console.log("true")
-        // }
-
-    }
-
-    const getPlayerInitials = () => {
-        setPlayerInitials(
-            <ul>
-                {
-                    initials.map((elem, idx) => (
-                        <button className='challenge7-buttons' onClick={() => handleClick(elem.initial)} key={idx}>{elem.initial}</button>
-                    ))
-                }
-            </ul>
+        setDisplayInactive(
+            inactivePlayers.map((player, idx) => (
+                <li className='inactive-player'
+                    key={idx}
+                    onClick={() => moveToActive(player.id)}
+                >
+                    {player.name}
+                    <img className="player-image" src={`/img-players/${player.image}`} alt="" />
+                </li>
+            ))
         )
-    }
+    }, [inactivePlayers, activePlayers, moveToActive])
+
+
+
 
     return (
-
-
         <div className='challenge8'>
             <h2>Challenge8</h2>
-            {playerInitials}
-            {
-                players.map((player, idx) => (
-                    <li key={idx}>
-                        {player.name}
-                        {/* <img src="/img-players/Joe.png" alt="" /> */}
-                        <img className="player-image" src={`/img-players/${player.image}`} alt="" />
-                        {/* <img src="#" alt="" /> */}
-                    </li>
-                ))
-            }
+            <div className='grid-container'>
+                <div className='active'>
+                    <h4>Active Players {activePlayers.length}</h4>
+                    {
+                        activePlayers.map((player) => (
+                            <li className='active-player'
+                                key={player.id}
+                                onClick={() => moveToInactive(player.id)}
+                            >
+                                {player.name}
+                                <img className="player-image" src={`/img-players/${player.image}`} alt="" />
+                            </li>
+                        ))
+                    }
+                </div>
+                <div className='inactive'>
+                    <h4>Inactive Players: {inactivePlayers.length}</h4>
+                    {displayInactive}
+                </div>
+            </div>
         </div>
     )
 }
-// src\data\img-players\Joe.png
+
 export default Challenge8

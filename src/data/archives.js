@@ -41,7 +41,17 @@ const previousChallengeList = [
         title: "Challenge 8",
         location: '/challenge8',
         description: 'Display player images in active and inactive columns',
+<<<<<<< HEAD
         keywords: ['useEffect', 'useState', 'Array.map']
+=======
+        keywords: ['useEffect', 'useState', 'useCallback', 'Array.map']
+    },
+    {
+        title: "Challenge 9",
+        location: '/challenge9',
+        description: 'Display player images in team columns',
+        keywords: ['useEffect', 'useState', 'useCallback', 'Array.map']
+>>>>>>> DeanMainFromChallenge7
     },
 
 
