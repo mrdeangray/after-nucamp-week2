@@ -31,8 +31,8 @@ const Challenge9 = () => {
             acc[curr.team].push(curr)
             return acc
         }, {})
-        console.log(groupedPlayers)
-        console.log(Object.keys(groupedPlayers))
+       // console.log(groupedPlayers)
+        //console.log(Object.keys(groupedPlayers))
         setDisplayTeams(
             <div className='container'>
                 {
