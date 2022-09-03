@@ -14,7 +14,7 @@ import Challenge7 from './components/Challenge7-Crystal';
 // import Challenge8 from './components/Challenge8';
 import Challenge8 from './components/Challenge8-Crystal';
 
-import Challenge9 from './components/Challenge9';
+import Challenge9 from './components/Challenge9-Dean';
 
 
 function App() {

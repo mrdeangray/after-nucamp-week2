@@ -31,7 +31,7 @@ const Challenge9 = () => {
             acc[curr.team].push(curr)
             return acc
         }, {})
-       // console.log(groupedPlayers)
+        // console.log(groupedPlayers)
         //console.log(Object.keys(groupedPlayers))
         setDisplayTeams(
             <div className='container'>
@@ -62,7 +62,7 @@ const Challenge9 = () => {
 
 
     return (
-        <div className='challenge9'>
+        <div className='challenge9-dean'>
             <div style={{ display: "inline-block" }}>
                 <h2>Challenge9</h2><button onClick={startOver}>Start Over</button>
             </div>
