@@ -8,7 +8,6 @@
 //Add a route/link for this component to the Header component.
 
 import { useCallback, useEffect, useState } from "react"
-import { update } from "react-spring";
 import players from "../data/players";
 
 const Challenge9 = () => {

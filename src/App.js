@@ -11,6 +11,7 @@ import ArchiveSearch from './pages/ArchiveSearch';
 import Active from './pages/Active';
 import Challenge7 from './components/Challenge7';
 import Challenge9 from './components/Challenge9';
+import Challenge10 from './components/Challenge10';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path='/active' element={<Active />} />
         <Route path='/Challenge7' element={<Challenge7 />} />
         <Route path='/challenge9' element = {<Challenge9 />} />
+        <Route path='/challenge10' element = {<Challenge10 />} />
 
       </Routes>
 

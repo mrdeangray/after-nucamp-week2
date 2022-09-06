@@ -1,10 +1,10 @@
-import Challenge9 from "../components/Challenge9"
+import Challenge10 from "../components/Challenge10"
 
 
 const Active = () => {
     return (
         <div>
-            <Challenge9 />
+            <Challenge10 />
         </div>
     )
 }

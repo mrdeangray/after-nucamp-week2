@@ -163,6 +163,7 @@ background: linear-gradient(90deg, rgba(10,0,78,1) 0%, rgba(1,83,169,1) 37%, rgb
     z-index: 2;
 }
 .teams-box{
+    border-radius: 10px;
     background-color: black;
     color: white;
     margin: 10px;
