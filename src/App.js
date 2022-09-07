@@ -15,6 +15,7 @@ import Challenge7 from './components/Challenge7-Crystal';
 import Challenge8 from './components/Challenge8-Crystal';
 
 import Challenge9 from './components/Challenge9-Dean';
+import Challenge10Dean from './components/Challenge10-Dean';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <Route path='/Challenge7' element={<Challenge7 />} />
         <Route path='/Challenge8' element={<Challenge8 />} />
         <Route path='/Challenge9' element={<Challenge9 />} />
+        <Route path='/Challenge10' element={<Challenge10Dean />} />
 
       </Routes>
 

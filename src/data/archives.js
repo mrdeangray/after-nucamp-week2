@@ -49,7 +49,12 @@ const previousChallengeList = [
         description: 'Display player images in team columns',
         keywords: ['useEffect', 'useState', 'useCallback', 'Array.map']
     },
-
+    {
+        title: "Challenge 10",
+        location: '/challenge10',
+        description: 'Display list of players in one column and allow re-order by drag/drop',
+        keywords: ['useState', 'Beautiful DND', 'Array.map']
+    },
 
 ]
 
