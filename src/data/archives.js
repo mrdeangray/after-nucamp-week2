@@ -42,6 +42,11 @@ const previousChallengeList = [
         location: '/challenge8',
         description: 'Display player images in active and inactive columns',
         keywords: ['useEffect', 'useState', 'Array.map']
+    },{
+        title: "Challenge 9",
+        location: '/challenge9',
+        description: 'Display player images in active and inactive columns',
+        keywords: ['useEffect', 'useState', 'Array.map']
     },
 
 
