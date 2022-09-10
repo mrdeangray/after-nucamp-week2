@@ -34,10 +34,8 @@ const Challenge11a = () => {
         if(dropFromId==='Inactive'){
             if(dropToId===playersData[dragId].team){
                 active[dropToId].splice(dropIndex, 0, playersData[dragId])
-               
                 setActive(active)
                 setInactive(inactive.filter(player=>player.id!==playersData[dragId].id))
-                
             }
             else if(dropToId==='Inactive'){
                 const newArr=inactive.filter(player=>player.id!==playersData[dragId].id)
@@ -46,14 +44,12 @@ const Challenge11a = () => {
             }
         }
         else if(dropToId==='Inactive'){
-                inactive.splice(dropIndex, 0, playersData[dragId]);
-                //inactive.push(playersData[dragId]);        
-                
+                inactive.splice(dropIndex, 0, playersData[dragId]);  
                 setInactive(inactive);
                 active[dropFromId]=active[dropFromId].filter(player=>player!==playersData[dragId]);
                 
         }
-        if(dropToId===dropFromId){
+        else if(dropToId===dropFromId){
                 active[dropToId]=active[dropToId].filter(player=>player!==playersData[dragId])
                 active[dropToId].splice(dropIndex, 0, playersData[dragId])
                 setActive(active)
